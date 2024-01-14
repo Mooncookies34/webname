@@ -1,0 +1,609 @@
+   <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> b</title>
+    <style>
+        /* Add your CSS styles here */
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            background-color: #232f3e;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 24px;
+        }
+
+        .product {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin: 10px;
+            display: inline-block;
+            width: 200px;
+        }
+
+        .product img {
+            width: 100%;
+        }
+
+        .product h2 {
+            font-size: 18px;
+            margin: 10px 0;
+        }
+
+        .product p {
+            font-size: 16px;
+            color: #007bff;
+        }
+
+        .product button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+
+        .cart-logo {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            cursor: pointer;
+        }
+
+        #cart {
+            display: none;
+            position: fixed;
+            top: 10%;
+            left: 10%;
+            width: 80%;
+            height: 80%;
+            background-color: white;
+            border: 1px solid #ccc;
+            padding: 20px;
+        }
+
+        #cart h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        #cart ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .cart-item {
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 1px solid #ccc;
+            padding: 10px 0;
+        }
+
+        .cart-item button {
+            background-color: red;
+            color: #fff;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+
+        #close-button {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+        }
+
+        #checkout {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .checkout-button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+
+        #payment-screen {
+            display: none;
+            position: fixed;
+            top: 10%;
+            left: 10%;
+            width: 80%;
+            height: 80%;
+            background-color: white;
+            border: 1px solid #ccc;
+            padding: 20px;
+        }
+
+        .payment-option {
+            margin: 10px;
+            cursor: pointer;
+        }
+
+        .payment-option:hover {
+            text-decoration: underline;
+        }
+
+        /* Customize payment form styles */
+        #bank-form, #paypal-form {
+            display: none;
+        }
+
+        /* Add more CSS styles for payment forms if needed */
+    </style>
+</head>
+<body>
+
+
+ 
+    </style>
+</head>
+<body>
+    <header>
+        <h1> About page</h1>
+    </header>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sidebar Navigation with Animation</title>
+    <style>
+        /* Reset default margin and padding */
+        body, ul, li {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Basic styling for the page */
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        /* Sidebar styles */
+        .sidebar {
+            position: fixed;
+            top: 0;
+            left: -250px; /* Start off-screen */
+            width: 250px;
+            height: 100%;
+            background:#423d40;
+            color: #fdfcfc;
+            overflow-y: auto;
+            transition: left 0.3s ease-in-out; /* Sliding animation */
+        }
+
+        .sidebar.show {
+            left: 0; /* Slide in from the left when "show" class is added */
+        }
+
+        /* Sidebar header */
+        .sidebar-header {
+            background: #424141;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .sidebar-header h2 {
+            margin: 0;
+        }
+
+        /* Sidebar menu */
+        .sidebar-menu {
+            list-style: none;
+            padding: 20px;
+        }
+
+        .sidebar-menu li {
+            margin-bottom: 10px;
+        }
+
+        .sidebar-menu a {
+            text-decoration: none;
+            color: white;
+            display: block;
+            padding: 5px;
+        }
+
+        /* Content styles */
+        .content {
+            margin-left: 0; /* Leave space for the sidebar when it's hidden */
+            transition: margin-left 0.3s ease-in-out; /* Content sliding animation */
+            padding: 20px;
+        }
+
+        /* Hamburger menu button */
+        .hamburger-menu {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            cursor: pointer;
+            z-index: 1;
+        }
+
+        .hamburger-menu div {
+            width: 30px;
+            height: 4px;
+            background: white;
+            margin: 6px 0;
+            transition: 0.4s;
+        }
+
+        .hamburger-menu.show div:nth-child(1) {
+            transform: rotate(-45deg) translate(-5px, 6px);
+        }
+
+        .hamburger-menu.show div:nth-child(2) {
+            opacity: 0;
+        }
+
+        .hamburger-menu.show div:nth-child(3) {
+            transform: rotate(45deg) translate(-5px, -6px);
+        }
+    </style>
+</head>
+<body>
+    <!-- Hamburger menu button -->
+    <div class="hamburger-menu" onclick="toggleSidebar()">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+
+    <!-- Sidebar -->
+    <div class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <h2>Menu</h2>
+        </div>
+        <ul class="sidebar-menu">
+            <li><a href="index.html.html">Home</a></li>
+            <li><a href="Apply.html.html">Apply</a></li>
+            <li><a href="#">coming soon</a></li>
+            <li><a href="about.html.html">About</a></li>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Support Request Form and Color Settings</title>
+    <style>
+        /* Your CSS styles go here */
+    </style>
+</head>
+<body>
+    <h2>Web settings</h2>
+
+    <form action="process_support.php" method="post" id="support-form" style="display: none;">
+<H2>support</h2>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br>
+
+        <label for="subject">Subject:</label>
+        <select id="subject" name="subject" required>
+            <option value="General Inquiry">General Inquiry</option>
+       
+            <option value="Account Assistance">Account Assistance</option>
+            <option value="Billing and Payments">Billing and Payments</option>
+            <!-- Add more options as needed -->
+        </select><br>
+
+        <label for="message">Message:</label><br>
+        <textarea id="message" name="message" rows="4" required></textarea><br>
+
+        <input type="submit" value="Submit">
+    </form>
+
+    <div class="color-settings" id="color-settings" style="display: none;">
+        <p>Choose your custom background color:</p>
+        <input type="color" id="color-picker" onchange="changeColor()"><br><br>
+    </div>
+
+    <div class="section-container">
+        <button class="section-button" onclick="toggleSupportForm()">
+            <span style="background: transparent;">👩‍💻</span>
+        </button>
+
+        <button class="section-button" onclick="toggleColorSettings()">
+            <span style="background: transparent;">🖌️</span>
+        </button>
+    </div>
+
+    <script>
+        function toggleSupportForm() {
+            const supportForm = document.getElementById('support-form');
+            if (supportForm.style.display === 'none') {
+                supportForm.style.display = 'block';
+            } else {
+                supportForm.style.display = 'none';
+            }
+        }
+
+        function toggleColorSettings() {
+            const colorSettings = document.getElementById('color-settings');
+            if (colorSettings.style.display === 'none') {
+                colorSettings.style.display = 'block';
+            } else {
+                colorSettings.style.display = 'none';
+            }
+        }
+
+        function changeColor() {
+            const colorPicker = document.getElementById('color-picker');
+            const selectedColor = colorPicker.value;
+            document.body.style.backgroundColor = selectedColor;
+        }
+    </script>
+</body>
+</html>
+
+
+
+
+        </ul>
+    </div>
+
+
+    <!-- Page content -->
+    <div class="content">
+       
+    </div>
+
+    <script>
+        // Function to toggle the sidebar
+        function toggleSidebar() {
+            var sidebar = document.getElementById('sidebar');
+            sidebar.classList.toggle('show');
+            var content = document.querySelector('.content');
+            content.style.marginLeft = sidebar.classList.contains('show') ? '250px' : '0';
+            var hamburger = document.querySelector('.hamburger-menu');
+            hamburger.classList.toggle('show');
+        }
+    </script>
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <style>
+    .gradient-custom {
+      /* fallback for old browsers */
+      background: #6a11cb;
+      /* Chrome 10-25, Safari 5.1-6 */
+      background: -webkit-linear-gradient(to right, rgba(106, 17, 203, 1), rgba(37, 117, 252, 1));
+      /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+      background: linear-gradient(to right, rgba(106, 17, 203, 1), rgba(37, 117, 252, 1));
+    }
+    .login-screen {
+      display: none;
+      background-color: rgba(0, 0, 0, 0.5);
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+    }
+    .login-card {
+      background-color: #ffffff;
+      border-radius: 1rem;
+      padding: 20px;
+      max-width: 400px;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <style>
+        /* Add your CSS styles here */
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        h1 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 20px;
+        }
+
+        .button {
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.5s, color 0.5s; /* Transition effect for color change */
+        }
+
+        .button:hover {
+            background-color: white;
+            color: #007BFF;
+        }
+
+        /* Add CSS for Learn More section */
+        .learn-more-section {
+            display: none; /* Initially hide the section */
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .learn-more-image {
+            display: none; /* Initially hide the image */
+            max-width: 100%;
+            height: auto;
+        }
+
+        .learn-more-info {
+            transition: margin-left 1s, margin-right 1s; /* Smooth transition for margin */
+            margin-left: 0;
+            margin-right: 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>
+</h1>
+    <h1>When the company was created?</h1>
+    <p>This company was founded on May 5th, 2023, under the name "Joyfully bites" However, on August 24th, 2023, the name was changed to "Moon Cookies" after a family brainstorming. They didn't know the cookies price unlit october 30th,2023, before they would give them for free and they lost on doign that 346$.</p>
+
+    <!-- Team Members -->
+
+    <!-- Christian Garnerone -->
+    <h1>Christian Garnerone</h1>
+    <p> Christian Garnerone serves as the CEO and leads various projects at the company. </p>
+
+    <!-- Learn More Button for Christian Garnerone -->
+    <button class="button" onclick="toggleLearnMore('christian-garnerone')">Learn More</button>
+
+    <!-- Learn More Section for Christian Garnerone -->
+    <div class="learn-more-section" id="christian-garnerone-section">
+        <img class="learn-more-image" src="example.jpg" alt="Example Image">
+        <div class="learn-more-info">
+            <h2>Christian Garnerone</h2>
+            <p> Born in Torino, Italy in 2010 to a canadian mother and an italian father, Christian grow up with a speaking disorder known as dyspraxia. This condition affected his ability to speak fluently, organizize himself and make fine coordinated movements. Despite these weaknesses, Christian love do challenges and he find thousands ways to solves his problems. He's always in a good mood, positive, generous, determinated and he's passionate about business. For him there are no limits to dreams. Christian is very fond of cookies prepared by his family and he had this idea of sharing this culinary delight with you. '' </p>
+        </div>
+    </div>
+
+    <!-- Sophie Picard -->
+    <h1>Sophie Picard</h1>
+    <p> She serves as the Chief Financial Officer (CFO) and is responsible for financial matters within the organization. </p>
+
+    <!-- Learn More Button for Sophie Picard -->
+    <button class="button" onclick="toggleLearnMore('sophie-picard')">Learn More</button>
+
+    <!-- Learn More Section for Sophie Picard -->
+    <div class="learn-more-section" id="sophie-picard-section">
+        <img class="learn-more-image" src="example.jpg" alt="Example Image">
+        <div class="learn-more-info">
+            <h2>Sophie Picard</h2>
+            <p> Born in 1976 in Canada, she is the mother of 5 children plus 2 stepchildren, graduated in fashion design and from the Albertina Academy of Fine Arts in Turin. He has always cooked Canadian dishes for his family and friends with high quality Italian ingredients, thus creating a unique fusion between Canadian and Italian flavours. </p>
+        </div>
+    </div>
+
+    <!-- Azalee Garnerone -->
+    <h1>Azalee Garnerone</h1>
+    <p>Azalee Garnerone joined the company on October 3rd,2023. She is the a parnter of the company.</p>
+
+    <!-- Learn More Button for Azalee Garnerone -->
+    <button class="button" onclick="toggleLearnMore('azalee-garnerone')">Learn More</button>
+
+    <!-- Learn More Section for Azalee Garnerone -->
+    <div class="learn-more-section" id="azalee-garnerone-section">
+        <img class="learn-more-image" src="example.jpg" alt="Example Image">
+        <div class="learn-more-info">
+            <h2>Azalee Garnerone</h2>
+            <p>Born in Torino, Italy in 2000, Azalée is the older sister of Christian. Azalée studied one year in South Korea, management of Pastry shop and she's studying and working in Ospitality management in Ottawa, Canada. Azalée and Christian have a special bond: she's always ready to help Christian with his projects even from afar. One of their best memories remains cooking family recipes together. '' </p>
+        </div>
+    </div>
+
+    <script>
+        // Function to toggle the Learn More section for a specific team member
+        function toggleLearnMore(member) {
+            const learnMoreSection = document.getElementById(member + '-section');
+            const learnMoreButton = document.querySelector('.' + member + '-button');
+            const learnMoreImage = document.querySelector('.' + member + '-image');
+            const learnMoreInfo = document.querySelector('.' + member + '-info');
+
+            if (learnMoreSection.style.display === 'none' || learnMoreSection.style.display === '') {
+                learnMoreSection.style.display = 'block';
+                learnMoreImage.style.display = 'block';
+                learnMoreInfo.style.marginLeft = '20%';
+                learnMoreInfo.style.marginRight = '20%';
+                learnMoreButton.style.backgroundColor = 'white'; // Change button color to white
+                learnMoreButton.style.color = '#007BFF'; // Change text color to blue
+                learnMoreButton.textContent = 'Close'; // Change button text
+            } else {
+                learnMoreSection.style.display = 'none';
+                learnMoreImage.style.display = 'none';
+                learnMoreInfo.style.marginLeft = '0';
+                learnMoreInfo.style.marginRight = '0';
+                learnMoreButton.style.backgroundColor = '#007BFF'; // Return button color to blue
+                learnMoreButton.style.color = 'white'; // Return text color to white
+                learnMoreButton.textContent = 'Learn More'; // Change button text back to original
+            }
+        }
+    </script>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Website</title>
+    <style>
+        /* Style for the "end of website" section */
+        .end-of-website {
+            background-color:  #232f3e; /* Change the background color */
+            color: #fff; /* Change the text color */
+            padding: 30px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <!-- Your website content here -->
+
+    <!-- End of website section -->
+    <div class="end-of-website">
+
+    <p class="right-align"> </p>
+<p class="right-align"> 
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Website</title>
+    <style>
+        /* Style for the "end of website" section */
+        .end-of-website {
+            background-color:  #232f3e; /* Change the background color */
+            color: #fff; /* Change the text color */
+            padding: 30px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <!-- Your website content here -->
+
+    <!-- End of website section -->
+    <div class="end-of-website">
+
+    <p class="right-align"> </p>
+<p class="right-align"> 
+
+

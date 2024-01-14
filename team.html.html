@@ -1,0 +1,336 @@
+
+
+      <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Web Page Title</title>
+    <style>
+        /* Add your CSS styles here */
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 24px;
+        }
+
+        .product {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin: 10px;
+            display: inline-block;
+            width: 200px;
+        }
+
+        /* Add more CSS styles for other elements as needed */
+        
+        .end-of-website {
+            background-color: #333;
+            color: #fff;
+            padding: 30px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Team Policy</h1>
+    </header>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sidebar Navigation with Animation</title>
+    <style>
+        /* Reset default margin and padding */
+        body, ul, li {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Basic styling for the page */
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        /* Sidebar styles */
+        .sidebar {
+            position: fixed;
+            top: 0;
+            left: -250px; /* Start off-screen */
+            width: 250px;
+            height: 100%;
+            background: #333;
+            color: white;
+            overflow-y: auto;
+            transition: left 0.3s ease-in-out; /* Sliding animation */
+        }
+
+        .sidebar.show {
+            left: 0; /* Slide in from the left when "show" class is added */
+        }
+
+        /* Sidebar header */
+        .sidebar-header {
+            background: #222;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .sidebar-header h2 {
+            margin: 0;
+        }
+
+        /* Sidebar menu */
+        .sidebar-menu {
+            list-style: none;
+            padding: 20px;
+        }
+
+        .sidebar-menu li {
+            margin-bottom: 10px;
+        }
+
+        .sidebar-menu a {
+            text-decoration: none;
+            color: white;
+            display: block;
+            padding: 5px;
+        }
+
+        /* Content styles */
+        .content {
+            margin-left: 0; /* Leave space for the sidebar when it's hidden */
+            transition: margin-left 0.3s ease-in-out; /* Content sliding animation */
+            padding: 20px;
+        }
+
+        /* Hamburger menu button */
+        .hamburger-menu {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            cursor: pointer;
+            z-index: 1;
+        }
+
+        .hamburger-menu div {
+            width: 30px;
+            height: 4px;
+            background: white;
+            margin: 6px 0;
+            transition: 0.4s;
+        }
+
+        .hamburger-menu.show div:nth-child(1) {
+            transform: rotate(-45deg) translate(-5px, 6px);
+        }
+
+        .hamburger-menu.show div:nth-child(2) {
+            opacity: 0;
+        }
+
+        .hamburger-menu.show div:nth-child(3) {
+            transform: rotate(45deg) translate(-5px, -6px);
+        }
+    </style>
+</head>
+<body>
+    <!-- Hamburger menu button -->
+    <div class="hamburger-menu" onclick="toggleSidebar()">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+
+    <!-- Sidebar -->
+    <div class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <h2>Menu</h2>
+        </div>
+        <ul class="sidebar-menu">
+            <li><a href="index.html.html">Home</a></li>
+            <li><a href="Apply.html.html">Apply</a></li>
+            <li><a href="#">coming soon</a></li>
+            <li><a href="about.html.html">About</a></li>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Support Request Form and Color Settings</title>
+    <style>
+        /* Your CSS styles go here */
+    </style>
+</head>
+<body>
+    <h2>Web settings</h2>
+
+    <form action="process_support.php" method="post" id="support-form" style="display: none;">
+<H2>support</h2>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br>
+
+        <label for="subject">Subject:</label>
+        <select id="subject" name="subject" required>
+            <option value="General Inquiry">General Inquiry</option>
+
+ <option value="General Inquiry"> Customize Box </option>
+
+            <option value="Apple Issue">Apple Issue</option>
+            <option value="Account Assistance">Account Assistance</option>
+            <option value="Billing and Payments">Billing and Payments</option>
+            <!-- Add more options as needed -->
+        </select><br>
+
+        <label for="message">Message:</label><br>
+        <textarea id="message" name="message" rows="4" required></textarea><br>
+
+        <input type="submit" value="Submit">
+    </form>
+
+    <div class="color-settings" id="color-settings" style="display: none;">
+        <p>Choose your custom background color:</p>
+        <input type="color" id="color-picker" onchange="changeColor()"><br><br>
+    </div>
+
+    <div class="section-container">
+        <button class="section-button" onclick="toggleSupportForm()">
+            <span style="background: transparent;">👩‍💻</span>
+        </button>
+
+        <button class="section-button" onclick="toggleColorSettings()">
+            <span style="background: transparent;">🖌️</span>
+        </button>
+    </div>
+
+    <script>
+        function toggleSupportForm() {
+            const supportForm = document.getElementById('support-form');
+            if (supportForm.style.display === 'none') {
+                supportForm.style.display = 'block';
+            } else {
+                supportForm.style.display = 'none';
+            }
+        }
+
+        function toggleColorSettings() {
+            const colorSettings = document.getElementById('color-settings');
+            if (colorSettings.style.display === 'none') {
+                colorSettings.style.display = 'block';
+            } else {
+                colorSettings.style.display = 'none';
+            }
+        }
+
+        function changeColor() {
+            const colorPicker = document.getElementById('color-picker');
+            const selectedColor = colorPicker.value;
+            document.body.style.backgroundColor = selectedColor;
+        }
+    </script>
+</body>
+</html>
+
+
+
+
+        </ul>
+    </div>
+
+
+    <!-- Page content -->
+    <div class="content">
+       
+    </div>
+
+    <script>
+        // Function to toggle the sidebar
+        function toggleSidebar() {
+            var sidebar = document.getElementById('sidebar');
+            sidebar.classList.toggle('show');
+            var content = document.querySelector('.content');
+            content.style.marginLeft = sidebar.classList.contains('show') ? '250px' : '0';
+            var hamburger = document.querySelector('.hamburger-menu');
+            hamburger.classList.toggle('show');
+        }
+    </script>
+</body>
+</html>
+
+
+
+    <!-- Insert your website policy content here -->
+    <p>     <strong>1. Privacy Policy</strong>
+
+    When you visit our website and use our services, we may collect and process your personal information. To learn how we handle your data, please read our <a href="insert-privacy-policy-link">Privacy Policy</a> for detailed information on data collection, storage, and usage. </p>
+<p>
+    <strong>2. Cookie Usage</strong>
+
+    Cookies are not just delicious treats; they are also small pieces of data that we use to enhance your browsing experience. Our <a href="insert-cookie-policy-link">Cookie Policy</a> provides information about the types of cookies we use and how you can manage your cookie preferences.
+</p>
+<p>
+    <strong>3. Birthday Party Services</strong>
+
+    We love making birthdays extra special with our cookies! Explore our <a href="insert-birthday-party-link">Birthday Party Services</a> section to find out more about our offerings, including themes, packages, and booking information.
+</p>
+<p>
+    <strong>4. Health Benefits</strong>
+
+    At Moon cookies, we understand the importance of balance and well-being. While our cookies are indulgent, we also offer healthier options. Check out our <a href="insert-health-benefits-link">Health Benefits</a> page to discover our efforts to provide nutritious choices.
+</p>
+<p>    <strong>5. Terms of Service</strong>
+
+    Before placing an order or using our services, please review our <a href="insert-terms-of-service-link">Terms of Service</a> for information on our policies regarding orders, payments, cancellations, and more.
+</p>
+ <p>   <strong>6. Contact Us</strong>
+
+    Have questions or need assistance? Feel free to <a href="insert-contact-link">Contact Us</a>. We're here to help with any inquiries or feedback you may have.
+
+    By using our website and services, you agree to abide by these policies. We recommend periodically reviewing them for any updates or changes.
+</p>
+<p>  <strong> 7. Return and Refund Policy </strong>
+
+In case you're not entirely satisfied with your order, we have a Return and Refund Policy that explains the process for returns and refunds.
+</p>
+<p>
+<strong> 8. Accessibility </strong>
+
+We strive to make our website accessible to everyone. If you encounter any accessibility issues, please let us know through our <a href="insert-contact-link"> Accessibility page</a>.
+</p>
+<strong>9. Third-Party Cookies </strong>
+
+   <p>We may also allow third-party cookies on our website. These cookies are placed by third-party service providers, such as analytics or advertising companies. Third-party cookies are subject to the privacy policies of the respective providers. We do not have control over third-party cookies, and you should review their policies to understand how they collect and process your information.
+   </p> 
+   <strong>10. Contact information</strong> 
+
+   <p>If you have any questions or concerns about this Cookies Policy or our use of cookies, please contact us at smooncookies37@gmail.com.
+   
+   This Cookies Policy was last updated on 1/11/23.
+</p>
+        <!-- Your website policy content goes here -->
+    </p>
+
+    <!-- End of website section -->
+    <div class="end-of-website">
+        <!-- Your end-of-website content here -->
+    </div>
+
+    <!-- Other content goes here -->
+
+</body>
+</html>

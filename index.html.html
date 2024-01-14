@@ -1,0 +1,970 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>moon Header Example</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+        }
+
+        header {
+            background: hsl(300, 14%, 99%);
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+        header img {
+            width: 28.3em;
+            height: 180.3px;
+            display: block;
+            margin: 0 auto;
+        }
+
+</style>
+
+</style>
+
+  
+</style>
+
+        
+    </style>
+</head>
+<body>
+    <header>
+       <img src="cookieswmoon.jpg.jpg" alt="mooncookie4">
+        
+    </header>
+
+    <!-- The rest of your webpage content goes here -->
+
+</body>
+</html>
+    
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sidebar Navigation with Animation</title>
+    <style>
+        /* Reset default margin and padding */
+        body, ul, li {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Basic styling for the page */
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        /* Sidebar styles */
+        .sidebar {
+            position: fixed;
+            top: 0;
+            left: -250px; /* Start off-screen */
+            width: 250px;
+            height: 100%;
+            background: #333;
+            color: white;
+            overflow-y: auto;
+            transition: left 0.3s ease-in-out; /* Sliding animation */
+        }
+
+        .sidebar.show {
+            left: 0; /* Slide in from the left when "show" class is added */
+        }
+
+        /* Sidebar header */
+        .sidebar-header {
+            background: #222;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .sidebar-header h2 {
+            margin: 0;
+        }
+
+        /* Sidebar menu */
+        .sidebar-menu {
+            list-style: none;
+            padding: 20px;
+        }
+
+        .sidebar-menu li {
+            margin-bottom: 10px;
+        }
+
+        .sidebar-menu a {
+            text-decoration: none;
+            color: white;
+            display: block;
+            padding: 5px;
+        }
+
+        /* Content styles */
+        .content {
+            margin-left: 0; /* Leave space for the sidebar when it's hidden */
+            transition: margin-left 0.3s ease-in-out; /* Content sliding animation */
+            padding: 20px;
+        }
+
+        /* Hamburger menu button */
+        .hamburger-menu {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            cursor: pointer;
+            z-index: 1;
+        }
+
+        .hamburger-menu div {
+            width: 30px;
+            height: 4px;
+            background: #221;
+            margin: 6px 0;
+            transition: 0.4s;
+        }
+
+        .hamburger-menu.show div:nth-child(1) {
+            transform: rotate(-45deg) translate(-5px, 6px);
+        }
+
+        .hamburger-menu.show div:nth-child(2) {
+            opacity: 0;
+        }
+
+        .hamburger-menu.show div:nth-child(3) {
+            transform: rotate(45deg) translate(-5px, -6px);
+        }
+    </style>
+</head>
+<body>
+    <!-- Hamburger menu button -->
+    <div class="hamburger-menu" onclick="toggleSidebar()">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+
+    <!-- Sidebar -->
+    <div class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <h2>Menu</h2>
+        </div>
+        <ul class="sidebar-menu">
+            <li><a href="index.html.html">Home</a></li>
+            <li><a href="Apply.html.html">Apply</a></li>
+        <li><a href="#">Coming soon</a></li>
+            <li><a href="about.html.html" >About</a></li>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Support Request Form and Color Settings</title>
+    <style>
+        /* Your CSS styles go here */
+    </style>
+</head>
+<body>
+    <h2>Web settings</h2>
+
+    <form action="process_support.php" method="post" id="support-form" style="display: none;">
+<H2>support</h2>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br>
+
+        <label for="subject">Subject:</label>
+        <select id="subject" name="subject" required>
+            <option value="General Inquiry">General Inquiry</option>
+
+ <option value="General Inquiry"> Customize Box </option>
+
+            <option value="Apple Issue">Apple Issue</option>
+            <option value="Account Assistance">Account Assistance</option>
+            <option value="Billing and Payments">Billing and Payments</option>
+            <!-- Add more options as needed -->
+        </select><br>
+
+        <label for="message">Message:</label><br>
+        <textarea id="message" name="message" rows="4" required></textarea><br>
+
+        <input type="submit" value="Submit">
+    </form>
+
+    <div class="color-settings" id="color-settings" style="display: none;">
+        <p>Choose your custom background color:</p>
+        <input type="color" id="color-picker" onchange="changeColor()"><br><br>
+    </div>
+
+    <div class="section-container">
+        <button class="section-button" onclick="toggleSupportForm()">
+            <span style="background: transparent;">👩‍💻</span>
+        </button>
+
+        <button class="section-button" onclick="toggleColorSettings()">
+            <span style="background: transparent;">🖌️</span>
+        </button>
+    </div>
+
+    <script>
+        function toggleSupportForm() {
+            const supportForm = document.getElementById('support-form');
+            if (supportForm.style.display === 'none') {
+                supportForm.style.display = 'block';
+            } else {
+                supportForm.style.display = 'none';
+            }
+        }
+
+        function toggleColorSettings() {
+            const colorSettings = document.getElementById('color-settings');
+            if (colorSettings.style.display === 'none') {
+                colorSettings.style.display = 'block';
+            } else {
+                colorSettings.style.display = 'none';
+            }
+        }
+
+        function changeColor() {
+            const colorPicker = document.getElementById('color-picker');
+            const selectedColor = colorPicker.value;
+            document.body.style.backgroundColor = selectedColor;
+        }
+    </script>
+</body>
+</html>
+
+
+
+
+        </ul>
+    </div>
+
+
+    <!-- Page content -->
+    <div class="content">
+       
+    </div>
+
+    <script>
+        // Function to toggle the sidebar
+        function toggleSidebar() {
+            var sidebar = document.getElementById('sidebar');
+            sidebar.classList.toggle('show');
+            var content = document.querySelector('.content');
+            content.style.marginLeft = sidebar.classList.contains('show') ? '250px' : '0';
+            var hamburger = document.querySelector('.hamburger-menu');
+            hamburger.classList.toggle('show');
+        }
+    </script>
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <style>
+    .gradient-custom {
+      /* fallback for old browsers */
+      background: #6a11cb;
+      /* Chrome 10-25, Safari 5.1-6 */
+      background: -webkit-linear-gradient(to right, rgba(106, 17, 203, 1), rgba(37, 117, 252, 1));
+      /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+      background: linear-gradient(to right, rgba(106, 17, 203, 1), rgba(37, 117, 252, 1));
+    }
+    .login-screen {
+      display: none;
+      background-color: rgba(0, 0, 0, 0.5);
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+    }
+    .login-card {
+      background-color: #ffffff;
+      border-radius: 1rem;
+      padding: 20px;
+      max-width: 400px;
+      text-align: center;
+    }
+  </style>
+</head>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            z-index: 1000;
+            animation: slideDown 1s ease;
+        }
+
+        .close-button {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background-color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .menu-button {
+            display: none;
+            position: fixed;
+            top: 50%;
+            right: 0;
+            transform: translateY(-50%);
+            background-color: #508bfc;
+            color: white;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+
+        .menu {
+            display: none;
+            position: fixed;
+            top: 0;
+            right: 0;
+            width: 200px;
+            height: 100%;
+            background-color: #508bfc;
+            color: white;
+            z-index: 1001;
+        }
+
+        @keyframes slideDown {
+            from {
+                transform: translateY(-100%);
+            }
+            to {
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+ 
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Example</title>
+
+    <style>
+        /* Style for the menu */
+        #menu {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            padding: 10px;
+            top: 50px;
+            right: 0;
+        }
+
+        /* Style for the button text */
+        .menu-button {
+            color: blue; /* You can change this color */
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Button to open the menu -->
+   
+
+    <!-- Menu content -->
+    <div id="menu">
+        <!-- Add this button to your sidebar menu -->
+        <ul>
+            <li><a href="javascript:void(0);" onclick="openSupportFormAndSelectOption(1)" class="menu-button">Customize Box</a></li>
+        </ul>
+        <!-- JavaScript function to open the support form and select the second option -->
+        <script>
+            function openSupportFormAndSelectOption(optionIndex) {
+                // Show the sidebar
+                document.getElementById("sidebar").classList.add("show");
+
+                // Show the support form
+                document.getElementById("support-form").style.display = "block";
+
+                // Select the second option (index 1) in the subject dropdown
+                document.getElementById("subject").selectedIndex = optionIndex;
+            }
+        </script>
+    </div>
+
+    <script>
+        // JavaScript to toggle the menu visibility
+        function toggleMenu() {
+            var menu = document.getElementById('menu');
+            menu.style.display = (menu.style.display === 'block') ? 'none' : 'block';
+        }
+    </script>
+
+</body>
+</html>
+
+
+ 
+
+
+
+<!-- ... (Rest of the HTML code) ... -->
+
+
+  <p>Discover our delicious range of cookies and cream treats</p>
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Horizontal Line Example</title>
+</head>
+<body>
+  <h1></h1>
+  <p></p>
+  <hr>
+  <h2></h2>
+  <p></p>
+</body>
+</html>
+
+    </div>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Go to Google Form</title>
+</head>
+<body>
+    <button onclick="window.location.href='https://forms.gle/AHTYBAeZVGxNzyVx6'"><h3>Leave a review</h3></button>
+</body>
+</html>
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>cookie Website</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <main>
+    <section class="hero">
+      <h1></h1>
+<p> </p>
+    </section>
+    <section class="products">
+      <h2>Our Products</h2>
+      <ul>
+
+    <ul>
+  <li>
+    <h3>Classic Cookies</h3>
+    <p>You love classic chocolate chip cookies. They're the kind of cookies that bring a warm, comforting feeling as you enjoy them. When you bite into one, you think "I want more."</p>
+    <p>Price: $0.60c</p>
+    <img src="cookiesblue5.jpg.jpg" alt="cookiesblue" width="100" height="100">
+    
+    
+  </li>
+
+  <!-- Add more list items with product descriptions here -->
+
+
+  <li>
+    <h3> 🎈 Party Like Never Before! 🎈</h3>
+    <p> Don't wait! Let's make your birthday a memori to remember. Reach out to us by email us at   <a href="#" class="btn">
+smooncookies37@gmail.com </a> to book your unforgettable celebration. </p>
+    <img src="dj9.jpg.jpg" alt="moondj" width="200" height="200"> 
+ <!DOCTYPE html>
+<html>
+<head>
+    <style>
+        #more-info {
+            display: none; /* Initially hidden */
+        }
+
+        .square-button {
+            display: inline-block;
+            width: 40px; /* Adjusted width */
+            height: 40px; /* Adjusted height */
+            background-color: #3498db;
+            color: #fff;
+            text-align: center;
+            line-height: 40px;
+            cursor: pointer;
+        }
+
+        .square-button:hover {
+            background-color: #2980b9;
+        }
+    </style>
+</head>
+<body>
+    <h1></h1>
+    <div class="square-button" onclick="toggleInfo()">learn</div>
+    
+    <div id="more-info">
+        <h2> Customized Entertainment Options for Your Party </h2>
+        <p> We specialize in crafting delicious cookies, but when you're ready to take your event to the next level, you have the power to request even more exciting options. From lively live music and DJ beats to captivating magic shows, our lineup is designed to keep your party in full swing. Keep in mind, these additional services come with an added cost. So, if you're eager to experience all we have to offer, drop us an email with your event date and your desired choices, and we'll make it happen. </p>
+
+    <script>
+        function toggleInfo() {
+            var info = document.getElementById("more-info");
+            if (info.style.display === "none" || info.style.display === "") {
+                info.style.display = "block";
+            } else {
+                info.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>
+
+  </li>
+    <li>
+    <h1>Create Your Own Box</h1>
+    <p>Get creative and build your own cookie box by selecting your favorite flavors and quantities. Simply click the "Customize Box" button, and you can pick and choose your cookies to create the perfect assortment. Once you're satisfied with your custom box, click "Order" to submit your unique order to Moon Cookies HQ.</p>
+   <!-- Add this button to your sidebar menu -->
+<li><a href="javascript:void(0);" onclick="openSupportFormAndSelectOption(1)">Customize Box</a></li>
+
+<!-- JavaScript function to open the support form and select the second option -->
+<script>
+function openSupportFormAndSelectOption(optionIndex) {
+    // Show the sidebar
+    document.getElementById("sidebar").classList.add("show");
+
+    // Show the support form
+    document.getElementById("support-form").style.display = "block";
+
+    // Select the second option (index 1) in the subject dropdown
+    document.getElementById("subject").selectedIndex = optionIndex;
+}
+</script>
+
+  </li>
+</ul>
+
+        
+       
+        <li>
+          
+
+        <h1> Want to become an employee? </h1>
+<p>
+1. Positive Work Environment: The cookie industry often exudes a warm and friendly atmosphere. Team members are passionate about what they do, and you'll likely find yourself among colleagues who share your enthusiasm for all things sweet.
+</p> 
+<p> 2. Creativity and Innovation: This cookie company you are constantly experimenting with flavors, shapes, and designs. Working here allows you to tap into your creative side, coming up with new and exciting cookie ideas that captivate customers' taste buds.</p>  
+      <img src="job.jpg.jpg" alt="jobmoon" width="200" height="200" >   
+<a href="Apply.html.html" class="btn">Apply now!</a>
+
+        </li>
+      </ul>
+    </section>   
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Donation Page</title>
+      <style>
+        /* Style for the button */
+        .btn {
+          display: inline-block;
+          padding: 10px 20px;
+          font-size: 16px;
+          text-align: center;
+          text-decoration: none;
+          color: #333; /* Text color */
+          border: 1px solid #333; /* Border color */
+          border-radius: 4px;
+        }
+      </style>
+    </head>
+    <body>
+    
+      <ul>
+        <li>
+          <h1>Donation</h1>
+          <p>
+            Support the cause by purchasing a branded box today. Facilitating your contribution is effortless, whether online or in-store—simply acquire a stylish t-shirt or a delectable box of cookies. Each cookie represents the empowerment of a child's voice, making your donation both convenient and impactful.
+          </p>
+          <a href="#" class="btn">Donate</a>
+        </li>
+      </ul>
+    
+    </body>
+    </html>
+    
+ 
+      </style>
+    </head>
+    <body>
+    
+      <ul>
+        <li>
+  
+    
+    </body>
+    </html>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Define some basic styles for the footer */
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+        }
+
+        /* Style for the scroll-up button */
+        #scrollUpButton {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            right: 30px;
+            z-index: 99;
+            background-color: #555;
+            color: #fff;
+            border: none;
+            width: 40px; /* Adjust the width to make it square */
+            height: 40px; /* Adjust the height to make it square */
+            border-radius: 4px; /* Adjust the border-radius to create rounded corners */
+            padding: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        #scrollUpButton:hover {
+            background-color: #333;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Scroll-up button -->
+<button id="scrollUpButton" title="Scroll to top">&#9650;</button>
+
+<!-- Your page content goes here -->
+
+<!-- Footer section at the end of the page -->
+<footer>
+   
+    </ul>
+
+<!-- Additional content goes here -->
+
+<script>
+    // Show or hide the scroll-up button based on the scroll position
+    window.onscroll = function() {
+        var scrollUpButton = document.getElementById("scrollUpButton");
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            scrollUpButton.style.display = "block";
+        } else {
+            scrollUpButton.style.display = "none";
+        }
+    };
+
+    // Add smooth scrolling functionality to the button
+    document.getElementById("scrollUpButton").addEventListener("click", function() {
+        scrollToTop(1000); // You can adjust the scrolling duration (in milliseconds) as needed
+    });
+
+    // Function to scroll to the top smoothly using requestAnimationFrame
+    function scrollToTop(duration) {
+        var start = window.scrollY;
+        var startTime = performance.now();
+        var easeOutQuad = function(t) {
+            return t * (2 - t);
+        };
+
+        function animateScroll(time) {
+            var timeFraction = (time - startTime) / duration;
+            if (timeFraction < 1) {
+                window.scrollTo(0, start - start * easeOutQuad(timeFraction));
+                requestAnimationFrame(animateScroll);
+            } else {
+                window.scrollTo(0, 0);
+            }
+        }
+
+        requestAnimationFrame(animateScroll);
+    }
+</script>
+
+</body>
+</html>
+
+    
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                margin: 0;
+                padding: 0;
+            }
+    
+            /* Define some basic styles for the footer */
+            footer {
+                background-color: #333;
+                color: #fff;
+                text-align: center;
+                padding: 10px;
+            }
+    
+            /* Styles for the "button" */
+            #cookieButton {
+                cursor: pointer;
+                color: #0000FF; /* Text color */
+                text-decoration: underline; /* Underline to make it look like a link */
+            }
+    
+            /* Styles for the modal container */
+            #modalContainer {
+                position: fixed;
+                top: 0;
+                right: -100%; /* Start off-screen to the right */
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+                display: flex;
+                justify-content: flex-end; /* Align modal to the right */
+                align-items: center;
+                transition: right 0.3s ease-in-out;
+            }
+    
+            /* Styles for the modal */
+            #cookieModal {
+                width: 300px;
+                height: 100%;
+                background-color: #333;
+                padding: 20px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            }
+    
+            /* Styles for the close button in the modal */
+            #closeButton {
+                background-color: #0000FF;
+                color: #ffffff;
+                border: none;
+                padding: 10px;
+                cursor: pointer;
+            }
+        </style>
+    </head>
+    <body>
+    
+    <!-- "Button" to open the modal -->
+    <span id="cookieButton" onclick="openCookieModal()"></span>
+    
+    <!-- Modal container -->
+    <div id="modalContainer" onclick="closeCookieModal()">
+        <!-- Modal for cookies settings -->
+        <div id="cookieModal" onclick="event.stopPropagation();">
+            <p>Check the team policy and Sign-In </p>
+            <!-- Close button for the modal -->
+            <button id="closeButton" onclick="closeCookieModal()">OK</button>
+        </div>
+    </div>
+    
+    <!-- Your page content goes here -->
+    
+    <!-- Footer section at the end of the page -->
+    <footer>
+        <p>Need help?</p>
+        <ul>
+            <li><a href="team.html.html" style="color: #ffc400;">Team Policy</a></li>
+            <!-- Add more footer links as needed -->
+            <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Styles for the "button" */
+        #cookieButton {
+            cursor: pointer;
+            color: #ffc400; /* Text color */
+            text-decoration: underline; /* Underline to make it look like a link */
+        }
+
+        /* Styles for the modal container */
+        #modalContainer {
+            position: fixed;
+            top: 0;
+            right: -100%; /* Start off-screen to the right */
+            width: 50%;
+            height: 50%;
+            background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+            display: flex;
+            justify-content: flex-end; /* Align modal to the right */
+            align-items: center;
+            transition: right 0.3s ease-in-out;
+        }
+
+        /* Styles for the modal */
+        #cookieModal {
+            width: 300px;
+            height: 100%;
+            background-color: #fffafa;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Styles for the close button in the modal */
+        #closeButton {
+            background-color: #0000FF;
+            color: rgb(248, 247, 247)717;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<!-- "Button" to open the modal -->
+<span id="cookieButton" onclick="openCookieModal()">Cookies Settings</span>
+
+<!-- Modal container -->
+<div id="modalContainer" onclick="closeCookieModal()">
+    <!-- Modal for cookies settings -->
+    <div id="cookieModal" onclick="event.stopPropagation();">
+
+                  <p> "Check the team policy and Sign-In" process, organizations can create a comprehensive and adaptive approach that not only ensures policy compliance but also fosters a culture of continuous improvement and employee engagement.</p>
+
+
+
+
+
+
+        <!-- Close button for the modal -->
+        <button id="closeButton" onclick="closeCookieModal()">OK</button>
+    </div>
+</div>
+
+<script>
+    // Function to open the modal
+    function openCookieModal() {
+        document.getElementById("modalContainer").style.right = "0";
+    }
+
+    // Function to close the modal
+    function closeCookieModal() {
+        document.getElementById("modalContainer").style.right = "-100%";
+    }
+</script>
+
+
+           
+
+    
+    </body>
+    </html>
+    
+ 
+   </li>
+ </ul>
+
+</body>
+
+</body>
+</html>
+
+</html>
+
+ <!-- White line -->
+ <hr>
+        </ul>
+
+<p>social media</p>
+    <div class="social-container">
+        <a class="image-link" href="https://youtube.com/@Moonchocolate1?si=8zLWy0e8MCGOplv-">
+            <img width="40" src="youtube.jpg.png" alt="YouTube">
+        </a>
+        <a class="image-link" href="https://instagram.com/mooncookiesx?igshid=NzZlODBkYWE4Ng%3D%3D&utm_source=qr">
+            <img width="40" src="insta.jpg.png" alt="Instagram">
+        </a>
+        <a class="image-link" href="mailto:smooncookies37@gmail.com">
+            <img width="40" src="email.jpg.png" alt="Email">
+        </a>
+    </div>  <!-- White line -->
+    <hr>
+
+        </p>Website made by star time</p>
+    </footer>
+    
+    <!-- Additional content goes here -->
+    
+    <script>
+        // Function to open the modal
+        function openCookieModal() {
+            document.getElementById("modalContainer").style.right = "0";
+        }
+    
+        // Function to close the modal
+        function closeCookieModal() {
+            document.getElementById("modalContainer").style.right = "-100%";
+        }
+    </script>
+    
+    </body>
+    </html>
+    
